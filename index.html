@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Сoordinates</title>
+  </head>
+
+  <body>
+    <header class="main-header">
+      <h1 class="header-primary">Experimental Zone</h1>
+    </header>
+    <div class="content-area">
+      <section class="options">
+        <div class="statistics-container">
+          <h2 class="header-secondary status-header">Mouse coordinates:</h2>
+
+          <div class="status">
+            <p>X-coordinate: <span id="x-coord">0</span></p>
+            <p>Y-coordinate: <span id="y-coord">0</span></p>
+          </div>
+        </div>
+
+        <div class="control">
+          <button class="gameBtn btn" onclick="start()">START GAME</button>
+          <button class="gameBtn btn" onclick="stop()">STOP GAME</button>
+        </div>
+
+        <div class="statistics">
+          <h3 class="header-tertiary">Your statistics:</h3>
+
+          <ul>
+            <li>Score: <span class="score">0</span></li>
+          </ul>
+        </div>
+
+        <a class="btn" href="#">GITHUB</a>
+      </section>
+
+      <div class="experimental-area">
+        <section class="exp-field-1">
+          <div class="main-container">
+            <div class="enemy-field">
+              <span class="target-zone"> </span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+              <span class="target-zone"></span>
+            </div>
+          </div>
+        </section>
+
+        <section class="exp-field-2"></section>
+      </div>
+    </div>
+    <script src="js/main.js"></script>
+  </body>
+</html>
