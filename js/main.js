@@ -24,12 +24,14 @@
   function createRandomTarget() {
     const targetsZone = document.querySelectorAll(".target-zone");
 
-    console.log("1");
     const target = document.createElement("span");
     target.className = "target";
 
     const randomTargetZone = Math.floor(Math.random() * 16);
     targetsZone[randomTargetZone].append(target);
+
+    const totalTargets = document.querySelector(".total-targets");
+    totalTargets.textContent = +totalTargets.textContent + 1;
 
     setTimeout(() => target.remove(), 1000);
   }
@@ -70,14 +72,23 @@
   let timer;
 
   function start() {
+    if (timer) return;
+
     timer = setInterval(() => createRandomTarget(), 1000);
 
     const userScore = document.querySelector(".score");
     userScore.textContent = 0;
+
+    const totalTargets = document.querySelector(".total-targets");
+    totalTargets.textContent = 0;
   }
 
   function stop() {
     clearInterval(timer);
-    document.querySelector(".target").remove();
+    timer = null;
+
+    if (document.querySelector(".target")) {
+      document.querySelector(".target").remove();
+    }
   }
 }
