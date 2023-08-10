@@ -31,7 +31,7 @@
     const randomTargetZone = Math.floor(Math.random() * 16);
     targetsZone[randomTargetZone].append(target);
 
-    setTimeout(() => target.remove(), 3000);
+    setTimeout(() => target.remove(), 1000);
   }
 }
 
@@ -70,7 +70,7 @@
   let timer;
 
   function start() {
-    timer = setInterval(() => createRandomTarget(), 3000);
+    timer = setInterval(() => createRandomTarget(), 1000);
 
     const userScore = document.querySelector(".score");
     userScore.textContent = 0;
