@@ -1,7 +1,7 @@
 "use-strict";
 
 /* ******************************************** */
-/* Отображение координатов мыши */
+/* Displaying mouse coordinates */
 /* ******************************************** */
 {
   const xCoord = document.querySelector("#x-coord");
