@@ -91,6 +91,7 @@ li {
 
 .enemy-field {
   border: solid 3px royalblue;
+  background-color: black;
 
   height: 50rem;
   width: 60rem;
@@ -107,7 +108,7 @@ li {
 }
 
 .target-zone {
-  background-color: black;
+  background-color: transparent;
   display: flex;
 
   height: 100%;
