@@ -33,7 +33,7 @@
     const totalTargets = document.querySelector(".total-targets");
     totalTargets.textContent = +totalTargets.textContent + 1;
 
-    setTimeout(() => target.remove(), 1000);
+    setTimeout(() => target.remove(), 3000);
   }
 }
 
@@ -42,8 +42,7 @@
 /* ******************************************** */
 {
   function removeElemByClick(event) {
-    console.log("Кликнули на элемент!");
-    let target = document.elementFromPoint(event.clientX, event.clientY);
+    let target = event.target;
 
     if (target.classList.contains("target")) {
       target.remove();
@@ -51,7 +50,7 @@
     }
   }
 
-  let enemyField = document.querySelector(".enemy-field");
+  const enemyField = document.querySelector(".enemy-field");
   enemyField.addEventListener("click", removeElemByClick);
 
   /* ******************************************** */
@@ -74,7 +73,7 @@
   function start() {
     if (timer) return;
 
-    timer = setInterval(() => createRandomTarget(), 1000);
+    timer = setInterval(() => createRandomTarget(), 3000);
 
     const userScore = document.querySelector(".score");
     userScore.textContent = 0;
