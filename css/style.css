@@ -136,3 +136,11 @@ li {
 
   transition: all 0.3s;
 }
+
+.game-speed {
+  margin-bottom: 1.2rem;
+}
+
+.game-speed-input {
+  width: 5rem;
+}

@@ -21,7 +21,7 @@
 /* ******************************************** */
 
 {
-  function createRandomTarget() {
+  function createRandomTarget(ms) {
     const targetsZone = document.querySelectorAll(".target-zone");
 
     const target = document.createElement("span");
@@ -33,7 +33,7 @@
     const totalTargets = document.querySelector(".total-targets");
     totalTargets.textContent = +totalTargets.textContent + 1;
 
-    setTimeout(() => target.remove(), 3000);
+    setTimeout(() => target.remove(), ms);
   }
 }
 
@@ -69,11 +69,17 @@
 
 {
   let timer;
-
+  let gameSpeedMs = 1000;
   function start() {
     if (timer) return;
 
-    timer = setInterval(() => createRandomTarget(), 3000);
+    const gameSpeedInput = document.querySelector(".game-speed-input");
+
+    if (gameSpeedInput.value > 0) {
+      gameSpeedMs = Math.round(gameSpeedInput.value * 1000);
+    }
+
+    timer = setInterval(() => createRandomTarget(gameSpeedMs), gameSpeedMs);
 
     const userScore = document.querySelector(".score");
     userScore.textContent = 0;
