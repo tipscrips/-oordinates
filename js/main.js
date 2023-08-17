@@ -76,7 +76,7 @@
     const gameSpeedInput = document.querySelector(".game-speed-input");
 
     if (gameSpeedInput.value > 0) {
-      gameSpeedMs = Math.round(gameSpeedInput.value * 1000);
+      gameSpeedMs = gameSpeedInput.value * 1000;
     }
 
     timer = setInterval(() => createRandomTarget(gameSpeedMs), gameSpeedMs);
@@ -91,7 +91,7 @@
   function stop() {
     clearInterval(timer);
     timer = null;
-
+    gameSpeedMs = 1000;
     if (document.querySelector(".target")) {
       document.querySelector(".target").remove();
     }
