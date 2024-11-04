@@ -19,5 +19,5 @@ An application where you can practice your aim
 
 ## Running a project locally
 1. Clone the repository:
-   master
+   ```bash
    git clone https://github.com/tipscrips/-oordinates.git
